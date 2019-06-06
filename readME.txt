@@ -199,3 +199,6 @@ Created Interface:
 Removed:
 	* All Tests. 
 		- I can go back and add all testing methods. Eventually. 
+Added all code for all classes. 
+
+Added Code for Robotic Interface.
