@@ -55,5 +55,13 @@ public class RobotDog extends VirtualPet implements Robotic {
 		oil -= 2;
 		maintenance +=5;
 	}
+	
+	boolean isRobotAlive() {
+		if(oil < 100 && maintenance < 100) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
 }

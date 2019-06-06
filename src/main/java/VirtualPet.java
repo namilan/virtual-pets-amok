@@ -43,4 +43,5 @@ public class VirtualPet {
 		happiness -= 2;		
 	}
 	
+	
 }

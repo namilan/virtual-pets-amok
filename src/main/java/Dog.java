@@ -58,5 +58,13 @@ public class Dog extends VirtualPet {
 		cageCleanliness -= 5;
 		
 	}
+	
+	public boolean isOrganicAlive() {
+		if(hunger < 100 && bored < 100 && thirst < 100) {
+			return true;
+	} else {
+		return false;
+		}
+	}
 
 }

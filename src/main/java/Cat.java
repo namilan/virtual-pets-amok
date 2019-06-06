@@ -55,5 +55,12 @@ public class Cat extends VirtualPet{
 		thirst += 2;
 	}
 	
+	public boolean isOrganicAlive() {
+		if(hunger < 100 && bored < 100 && thirst < 100) {
+			return true;
+	} else {
+		return false;
+		}
+	}	
 
 }
