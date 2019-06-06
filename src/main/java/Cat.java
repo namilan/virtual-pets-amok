@@ -40,11 +40,11 @@ public class Cat extends VirtualPet{
 		return thirst <=50;
 	}
 	
-	public boolean litterBoxClean() {
+	public boolean isLitterBoxClean() {
 		return litterBox >=50;
 	}
 	
-	public boolean litterBoxDirty() {
+	public boolean isLitterBoxDirty() {
 		return litterBox <=50;
 	}
 	
