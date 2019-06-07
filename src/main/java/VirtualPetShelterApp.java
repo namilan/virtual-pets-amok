@@ -34,6 +34,25 @@ public class VirtualPetShelterApp {
 			System.out.println("");
 			robotsPlayhouse.printAllRobotPetNames();
 			
+			System.out.println("\n This is the status of your organic pets: ");
+			System.out.println("\nName\t|Hunger\t|Thirst\t|Boredom|Cage Condition |Kitty Litter|");
+			System.out.println("--------|-------|-------|-------|---------------|------------");
+			
+//			for (VirtualPet currentPet : ronnysPlayhouse.getOrganicsInPlayhouse()) {
+//				System.out.println(currentPet.name + "\t|" + currentPet.hunger + "\t|" + currentPet.thirst + "\t|"
+//						+ currentPet.bored + "\t|" + currentPet.clean + "\t \t|" + currentPet.catLitterBox);
+//			}
+				
+			System.out.println("\n This is the status of your robotic pets: ");
+			System.out.println("\nName\t|Maintenance\t|Oil\t|Happiness");
+			System.out.println("--------|---------------|-------|-------");
+//			
+//			for (VirtualPet currentRobot : robotsInPlayhouse.getRobotsInPlayhouse()) {
+//				System.out.println(currentRobot.name + "\t|" + currentRobot.Maintenance + "\t \t|" + currentRobot.Oil + "\t|"
+//						+ currentRobot.happiness);
+//				
+//			}
+			
 			System.out.println("");
 			System.out.println("Here are some options for you!");
 			System.out.println("1: Would you like to feed the fluffy pets?");
