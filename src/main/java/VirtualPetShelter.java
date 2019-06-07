@@ -3,8 +3,10 @@ import java.util.List;
 
 public class VirtualPetShelter {
 	
-	List<VirtualPet> organicsInPlayhouse;
-	List<VirtualPet> robotsInPlayhouse;
+	List<VirtualPet> organicsInPlayhouse = new ArrayList<VirtualPet>();
+	List<VirtualPet> robotsInPlayhouse = new ArrayList<VirtualPet>();
+//	List<Cat> catInPlayhouse = new ArrayList<Cat>();
+//	List<Dog> dogInPlayhouse = new ArrayList<Dog>();
 	
 	public List <VirtualPet> getOrganicsInPlayhouse(){
 		return organicsInPlayhouse;
@@ -13,6 +15,14 @@ public class VirtualPetShelter {
 	public List <VirtualPet> getRobotsInPlayhouse(){
 		return robotsInPlayhouse;
 	}
+	
+//	public List <Cat> getCatInPlayhouse(){
+//		return catInPlayhouse;
+//	}
+//	
+//	public List <Dog> getDogInPlayhouse(){
+//		return dogInPlayhouse;
+//	}
 	
 	public String getUserPetName() {
 		return this.getUserPetName();
@@ -32,6 +42,18 @@ public class VirtualPetShelter {
 		}
 	}
 	
+//	public void printAllCatHungerLevels() {
+//		for (Cat currentPet : getCatInPlayhouse()) {
+//			System.out.println(currentPet.getHunger());
+//		}	
+//	}
+//	
+//	public void printAllDogHungerLevels() {
+//		for (Dog currentPet: getDogInPlayhouse()) {
+//			System.out.println(currentPet.getHunger());
+//		}
+//	}
+//	
 	public void adoptPets(VirtualPet pet) {
 		this.organicsInPlayhouse.remove(pet);
 	}
@@ -64,7 +86,7 @@ public class VirtualPetShelter {
 		return this.organicsInPlayhouse.add(pet);
 	}
 	
-	public void admitPetByName(String name) {
+	public void admitPetByName(String name, String type) {
 		VirtualPet newPet = new VirtualPet (name);
 		this.organicsInPlayhouse.add(newPet);
 	}
@@ -95,6 +117,15 @@ public class VirtualPetShelter {
 			
 		}
 		
+			return false;
+	}
+	
+	public boolean areOrganicPetsNeedingPlay() {
+		for(VirtualPet currentPet : getOrganicsInPlayhouse()) {
+			if(currentPet.isBored()) {
+				return true;
+			}
+		}
 			return false;
 	}
 	
@@ -172,6 +203,17 @@ public class VirtualPetShelter {
 			return false;
 	}
 	
+	public boolean isDogNeedingWalked() {
+		for(VirtualPet currentPet : getOrganicsInPlayhouse()) {
+			if(currentPet.getClass().getName().equals("Dog")) {
+				if(((Dog) currentPet).isDogNeedingWalked()) {
+					return true;
+				}
+			}
+		}
+			return false;
+	}
+	
 	public void makeAllOrganicPetsTick() {
 		for(VirtualPet currentPet : getOrganicsInPlayhouse()) {
 			currentPet.tick();
@@ -206,6 +248,20 @@ public class VirtualPetShelter {
 		for(VirtualPet currentRobot : getRobotsInPlayhouse()) {
 			((RobotCat) currentRobot).robotCatTick();
 		}
+	}
+	
+	public boolean isBored() {
+		for(VirtualPet currentPet : getOrganicsInPlayhouse()) {
+			if(currentPet.isBored() == true) {
+				return true;
+			}
+		}
+			return false;
+	}
+
+	public void admitPetByRobotName(String robotName) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

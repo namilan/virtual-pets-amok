@@ -5,6 +5,7 @@ public class Dog extends VirtualPet {
 	int hunger = 30;
 	int thirst = 15;
 	int cageCleanliness = 75;
+	int walk = 50;
 	
 	
 	public int getHealth() {
@@ -25,6 +26,14 @@ public class Dog extends VirtualPet {
 	public void walkTheDog() {
 		this.cageCleanliness -= 5;
 		this.happiness += 5;
+	}
+	
+	public boolean isDogNeedingWalked() {
+		return walk >=50;
+	}
+	
+	public boolean isDogNotNeedingWalked() {
+		return walk <= 50;
 	}
 	
 	public boolean isHungry() {

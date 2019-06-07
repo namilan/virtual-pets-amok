@@ -43,5 +43,12 @@ public class VirtualPet {
 		happiness -= 2;		
 	}
 	
+	boolean isBored() {
+		if(bored < 100) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	
 }
